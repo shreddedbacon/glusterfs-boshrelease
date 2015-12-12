@@ -1,0 +1,6 @@
+---
+name: glusterfs
+templates: {}
+
+packages:
+  - glusterfs

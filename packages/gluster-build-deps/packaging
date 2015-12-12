@@ -1,0 +1,101 @@
+set -e
+
+export PREFIX=${BOSH_INSTALL_TARGET}
+export PATH=$PREFIX/bin:/var/vcap/packages/gluster-build-tools/bin:$PATH
+
+#libaio
+tar xzf gluster-build-deps/libaio-0.3.110-1.tar.gz
+(
+ set -e
+ cd libaio-0.3.110-1
+ make install prefix=$PREFIX
+)
+
+#libibverbs
+tar xzf gluster-build-deps/libibverbs-1.1.8.tar.gz
+(
+  set -e
+  cd libibverbs-1.1.8
+  ./autogen.sh
+  ./configure --prefix=$PREFIX
+  make install prefix=$PREFIX
+)
+
+#librdmacm
+tar xzf gluster-build-deps/librdmacm-1.0.21.tar.gz
+(
+  set -e
+  cd librdmacm-1.0.21
+  CFLAGS="-I$PREFIX/include" LDFLAGS="-L$PREFIX/include" ./configure --prefix=$PREFIX --includedir=$PREFIX/include --libdir=$PREFIX/lib --disable-libcheck
+  make prefix=$PREFIX LIBS=-libverbs LDFLAGS=-L$PREFIX/lib
+)
+
+#flex
+tar xzf gluster-build-deps/flex-2.5.33.tar.gz
+(
+  set -e
+  cd flex-2.5.33
+  ./configure --prefix=$PREFIX
+  make install prefix=$PREFIX
+)
+
+#bison
+tar xzf gluster-build-deps/bison-2.3.tar.gz
+(
+  set -e
+  cd bison-2.3
+  ./configure --prefix=$PREFIX --with-libiconv-prefix=/usr/local/libiconv/
+  make install prefix=$PREFIX
+)
+
+#expat
+tar xzf gluster-build-deps/expat-2.0.1.tar.gz
+(
+  set -e
+  cd expat-2.0.1
+  ./configure --prefix=$PREFIX
+  make install prefix=$PREFIX
+)
+
+# XML-Parser
+tar xzf gluster-build-deps/XML-Parser-2.44.tar.gz
+(
+  set -e
+  cd XML-Parser-2.44
+  perl Makefile.PL PREFIX=$PREFIX EXPATLIBPATH=$PREFIX/lib EXPATINCPATH=$PREFIX/include
+  make install prefix=$PREFIX
+)
+
+export PERL5LIB=/var/vcap/packages/gluster-build-deps/lib/perl/5.18.2
+
+# intltool
+tar xzf gluster-build-deps/intltool-0.51.0.tar.gz
+(
+  set -e
+  cd intltool-0.51.0
+  ./configure --prefix=$PREFIX
+  make install prefix=$PREFIX
+)
+
+#userspace-rcu
+tar xjf gluster-build-deps/userspace-rcu-0.9.1.tar.bz2
+(
+  set -e
+  cd userspace-rcu-0.9.1
+  ./configure --prefix=$PREFIX
+  make install prefix=$PREFIX
+)
+
+#lvm2
+tar xzf gluster-build-deps/LVM2.2.02.130.tgz
+(
+  set -e
+  cd LVM2.2.02.130
+  ./configure --prefix=$PREFIX    \
+              --exec-prefix=      \
+              --with-confdir=/etc \
+              --enable-applib     \
+              --enable-cmdlib     \
+              --enable-pkgconfig
+  make install prefix=$PREFIX
+)

@@ -1,0 +1,8 @@
+---
+name: gluster-build-deps
+
+dependencies:
+  - gluster-build-tools
+
+files:
+  - gluster-build-deps/**/*

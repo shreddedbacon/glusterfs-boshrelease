@@ -1,0 +1,37 @@
+set -e
+
+export PREFIX=${BOSH_INSTALL_TARGET}
+export PATH=$PREFIX/bin:$PATH
+echo "test"
+
+
+# autoconf
+tar xzf gluster-build-tools/autoconf-2.69.tar.gz
+(
+  set -e
+  cd autoconf-2.69
+  autoconf_dir=$PREFIX/share/autoconf ./configure --prefix=$PREFIX
+  make
+  make install prefix=$PREFIX
+)
+
+# automake
+tar xzf gluster-build-tools/automake-1.15.tar.gz
+(
+  set -e
+  cd automake-1.15
+  ./configure --prefix=$PREFIX
+  make
+  make install prefix=$PREFIX
+)
+
+# libtool
+tar xzf gluster-build-tools/libtool-2.4.6.tar.gz
+(
+  set -e
+  cd libtool-2.4.6
+  ./configure --prefix=$PREFIX
+  make
+  make install prefix=$PREFIX
+)
+

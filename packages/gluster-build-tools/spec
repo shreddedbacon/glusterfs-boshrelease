@@ -1,0 +1,5 @@
+---
+name: gluster-build-tools
+
+files:
+  - gluster-build-tools/**/*
