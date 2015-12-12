@@ -1,0 +1,5 @@
+check process glusterd
+  with pidfile /var/vcap/sys/run/glusterfs/glusterd.pid
+  start program "/var/vcap/jobs/glusterfs/bin/glusterd_ctl start" with timeout 20 seconds
+  stop program "/var/vcap/jobs/glusterfs/bin/glusterd_ctl stop" with timeout 20 seconds
+  group vcap

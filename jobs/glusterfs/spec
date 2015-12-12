@@ -1,6 +1,9 @@
 ---
 name: glusterfs
-templates: {}
+templates:
+  glusterd_ctl.erb: "bin/glusterd_ctl"
+  glusterd.vol: "conf/glusterd.vol"
 
 packages:
   - glusterfs
+  - python

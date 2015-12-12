@@ -1,0 +1,33 @@
+#!/bin/bash
+
+JOB_DIR=/var/vcap/jobs/glusterfs
+RUN_DIR=/var/vcap/sys/run/glusterfs
+LOG_DIR=/var/vcap/sys/log/glusterfs
+STORE_DIR=/var/vcap/store/glusterfs
+PATH=$JOB_DIR/packages/glusterfs/sbin:$JOB_DIR/packages/python/bin:$PATH
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR $LOG_DIR $STORE_DIR
+
+    glusterd -p $RUN_DIR/glusterd.pid \
+             -S $RUN_DIR/glusterd.socket \
+             -f $JOB_DIR/conf/glusterd.vol \
+             -l /var/vcap/sys/log/glusterfs/glusterd.log \
+             -L DEBUG
+
+    RETVAL=$?
+    echo
+    [ $RETVAL -ne 0 ] && exit $RETVAL
+    ;;
+
+  stop)
+    kill $(cat $RUN_DIR/glusterd.pid)
+    ;;
+
+  *)
+    echo "Usage: glusterd_ctl <start|stop>"
+    ;;
+
+esac
