@@ -7,4 +7,4 @@ dependencies:
   - python
 
 files:
-  - glusterfs/**/*
+  - glusterfs/glusterfs-3.6.7.tar.gz

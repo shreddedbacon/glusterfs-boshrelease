@@ -5,4 +5,13 @@ dependencies:
   - gluster-build-tools
 
 files:
-  - gluster-build-deps/**/*
+  - gluster-build-deps/bison-2.3.tar.gz
+  - gluster-build-deps/expat-2.0.1.tar.gz
+  - gluster-build-deps/flex-2.5.33.tar.gz
+  - gluster-build-deps/intltool-0.51.0.tar.gz
+  - gluster-build-deps/libaio-0.3.110-1.tar.gz
+  - gluster-build-deps/libibverbs-1.1.8.tar.gz
+  - gluster-build-deps/librdmacm-1.0.21.tar.gz
+  - gluster-build-deps/LVM2.2.02.130.tgz
+  - gluster-build-deps/userspace-rcu-0.9.1.tar.bz2
+  - gluster-build-deps/XML-Parser-2.44.tar.gz
