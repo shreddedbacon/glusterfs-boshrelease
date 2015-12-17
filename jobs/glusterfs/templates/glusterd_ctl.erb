@@ -19,6 +19,9 @@ case $1 in
 
     RETVAL=$?
     echo
+
+    $JOB_DIR/bin/setup_nodes.sh
+
     [ $RETVAL -ne 0 ] && exit $RETVAL
     ;;
 

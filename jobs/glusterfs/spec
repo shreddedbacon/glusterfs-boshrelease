@@ -2,6 +2,7 @@
 name: glusterfs
 templates:
   glusterd_ctl.erb: "bin/glusterd_ctl"
+  setup_nodes.sh.erb: "bin/setup_nodes.sh"
   glusterd.vol: "conf/glusterd.vol"
 
 packages:

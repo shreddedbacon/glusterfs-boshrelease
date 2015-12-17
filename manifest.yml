@@ -19,7 +19,11 @@ jobs:
   resource_pool: default
   templates:
   - name: glusterfs
-
+properties:
+  glusterfs:
+    nodes:
+      - 10.244.111.6
+      - 10.244.111.10
 name: glusterfs
 networks:
 - name: default

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PATH=/var/vcap/jobs/glusterfs/packages/glusterfs/sbin:/var/vcap/jobs/glusterfs/packages/python/bin:$PATH
+
+<% Array(p('glusterfs.nodes')).each do |node| %>
+gluster peer probe <%= node %>
+<% end %>
