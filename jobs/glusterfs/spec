@@ -5,6 +5,7 @@ templates:
   glusterd_ctl.erb: "bin/glusterd_ctl"
   setup_nodes.sh.erb: "bin/setup_nodes.sh"
   glusterd.vol: "conf/glusterd.vol"
+  post-deploy.sh: "bin/post-deploy"
 
 provides:
   - name: glusterfs
