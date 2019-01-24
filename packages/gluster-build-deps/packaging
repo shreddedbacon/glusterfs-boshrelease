@@ -47,9 +47,8 @@ tar xzf gluster-build-deps/libibverbs-1.2.1.tar.gz
 (
   set -e
   cd libibverbs-1.2.1
-  #./autogen.sh
-  ./configure --prefix=$PREFIX
-  make install prefix=$PREFIX
+  LDFLAGS=-L${PREFIX}/lib CFLAGS=-I${PREFIX}/include ./configure --prefix=$PREFIX
+  LDFLAGS=-L${PREFIX}/lib CFLAGS=-I${PREFIX}/include make install prefix=$PREFIX
 )
 
 #librdmacm
