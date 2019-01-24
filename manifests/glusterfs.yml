@@ -1,0 +1,35 @@
+---
+name: glusterfs
+
+releases:
+- name: glusterfs
+  version: latest
+
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: latest
+
+instance_groups:
+- name: glusterfs-master
+  instances: 3
+  stemcell: default
+  vm_type: default
+  azs: [z1]
+  persistent_disk_type: default
+  networks:
+  - name: default
+  jobs:
+  - name: glusterfs
+    release: glusterfs
+    consumes:
+      glusterfs: {from: glusterfs-master}
+    provides:
+      glusterfs: {as: glusterfs-master}
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  serial: false
+  canary_watch_time: 1000-60000
+  update_watch_time: 1000-60000

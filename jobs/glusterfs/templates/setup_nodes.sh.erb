@@ -2,6 +2,19 @@
 
 PATH=/var/vcap/jobs/glusterfs/packages/glusterfs/sbin:/var/vcap/jobs/glusterfs/packages/python/bin:$PATH
 
-<% Array(p('glusterfs.nodes')).each do |node| %>
-gluster peer probe <%= node %>
-<% end %>
+<%-
+servers = nil
+use_link = true
+if_link('glusterfs') { |servers_link| servers = servers_link.instances.map }
+unless servers
+  servers = p('glusterfs.nodes')
+  use_link = false
+end -%>
+
+<% for server in servers -%>
+<% if use_link == true -%>
+gluster peer probe <%= server.address %>
+<% else -%>
+gluster peer probe <%= server['address'] %>
+<% end -%>
+<% end -%>

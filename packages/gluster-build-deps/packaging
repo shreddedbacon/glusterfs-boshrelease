@@ -7,7 +7,7 @@ export PATH=$PREFIX/bin:/var/vcap/packages/gluster-build-tools/bin:$PATH
 tar xzf gluster-build-deps/libaio-0.3.110-1.tar.gz
 (
  set -e
- cd libaio-0.3.110-1
+ cd libaio-0.3.110*
  make install prefix=$PREFIX
 )
 
@@ -16,7 +16,7 @@ tar xzf gluster-build-deps/libibverbs-1.1.8.tar.gz
 (
   set -e
   cd libibverbs-1.1.8
-  ./autogen.sh
+  #./autogen.sh
   ./configure --prefix=$PREFIX
   make install prefix=$PREFIX
 )

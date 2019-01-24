@@ -1,9 +1,20 @@
 ---
 name: glusterfs
+
 templates:
   glusterd_ctl.erb: "bin/glusterd_ctl"
   setup_nodes.sh.erb: "bin/setup_nodes.sh"
   glusterd.vol: "conf/glusterd.vol"
+
+provides:
+  - name: glusterfs
+    type: glusterfs
+    shared: true
+
+consumes:
+  - name: glusterfs
+    type: glusterfs
+    optional: true
 
 packages:
   - glusterfs

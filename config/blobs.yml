@@ -1,1 +1,45 @@
---- {}
+gluster-build-deps/LVM2.2.02.130.tgz:
+  size: 1854927
+  sha: 9503a12881cb408aec6b774f0c92384c814d9684
+gluster-build-deps/XML-Parser-2.44.tar.gz:
+  size: 237377
+  sha: 0ab6b932713ec1f9927a1b1c619b6889a5c12849
+gluster-build-deps/bison-2.3.tar.gz:
+  size: 1386694
+  sha: 4df84c2c5971946111ff1982fb830b3c78d7c57e
+gluster-build-deps/expat-2.0.1.tar.gz:
+  size: 446456
+  sha: 663548c37b996082db1f2f2c32af060d7aa15c2d
+gluster-build-deps/flex-2.5.33.tar.gz:
+  size: 880445
+  sha: 9bf2d66bb2e15c26c466eb88218cca6ad9476805
+gluster-build-deps/intltool-0.51.0.tar.gz:
+  size: 162286
+  sha: a0c3bcb99d1bcfc5db70f8d848232a47c47da090
+gluster-build-deps/libaio-0.3.110-1.tar.gz:
+  size: 42270
+  sha: f8f6ed15f22e528f6f415939b07854539e3360e4
+gluster-build-deps/libibverbs-1.1.8.tar.gz:
+  size: 406548
+  sha: df1afc6f368f4ad4c7a74d270591fc79db875b2b
+gluster-build-deps/librdmacm-1.0.21.tar.gz:
+  size: 406369
+  sha: eec9a2e50fe5d51288a340a058ff4bf3ffdb67e9
+gluster-build-deps/userspace-rcu-0.9.1.tar.bz2:
+  size: 468197
+  sha: ca1b603655c3c5bf5d5b6254117999e3ae5f6751
+gluster-build-tools/autoconf-2.69.tar.gz:
+  size: 1927468
+  sha: 562471cbcb0dd0fa42a76665acf0dbb68479b78a
+gluster-build-tools/automake-1.15.tar.gz:
+  size: 2244206
+  sha: b5a840c7ec4321e78fdc9472e476263fa6614ca1
+gluster-build-tools/libtool-2.4.6.tar.gz:
+  size: 1806697
+  sha: 25b6931265230a06f0fc2146df64c04e5ae6ec33
+glusterfs/glusterfs-3.6.7.tar.gz:
+  size: 6101074
+  sha: a1ac3c6bdee750b3143d9cd768b9bfca71b21a49
+python/Python-2.7.8.tgz:
+  size: 14846119
+  sha: 511960dd78451a06c9df76509635aeec05b2051a
