@@ -2,11 +2,10 @@
 set -e
 
 export PACKAGES=/var/vcap/packages
-export PREFIX=$PACKAGES/gluster-build-deps
-export PATH=$PREFIX/bin:$PACKAGES/gluster-build-tools/bin:$PACKAGES/python/bin:$PATH
+export PATH=$PACKAGES/gluster-build-deps/bin:$PACKAGES/gluster-build-tools/bin:$PACKAGES/python/bin:$PATH
 
-tar xzf glusterfs/glusterfs-3.6.7.tar.gz
-cd glusterfs-3.6.7
-
-./configure --prefix=$PREFIX
-make install prefix=$BOSH_INSTALL_TARGET
+tar xzf glusterfs/glusterfs-5.3.tar.gz
+cd glusterfs-5.3
+touch configure
+LDFLAGS=-L$PACKAGES/gluster-build-deps/lib CFLAGS=-I$PACKAGES/gluster-build-deps/include ./configure --prefix=$BOSH_INSTALL_TARGET --disable-tiering
+LDFLAGS=-L$PACKAGES/gluster-build-deps/lib CFLAGS=-I$PACKAGES/gluster-build-deps/include make install
