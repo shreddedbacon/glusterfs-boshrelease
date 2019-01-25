@@ -2,7 +2,8 @@
 name: glusterfs
 
 dependencies:
+  - gluster-build-deps
+  - gluster-build-tools
 
 files:
-  - gluster-build-deps/*.deb
   - glusterfs/glusterfs-5.3.tar.gz

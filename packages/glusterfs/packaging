@@ -1,22 +1,16 @@
 # abort script on any command that exits with a non zero value
 set -e
 
-#export PACKAGES=/var/vcap/packages
-#export PATH=$PACKAGES/python/bin:$PATH
-
-shopt -s extglob
-
-dpkg -i gluster-build-deps/*(*-minimal*).deb
-dpkg -i gluster-build-deps/*.deb
-
-cp -a gluster-build-deps ${BOSH_INSTALL_TARGET}
+export PACKAGES=/var/vcap/packages
+export PATH=$PACKAGES/gluster-build-deps/bin:$PACKAGES/gluster-build-tools/bin:$PACKAGES/python/bin:$PATH
 
 tar xzf glusterfs/glusterfs-5.3.tar.gz
 (
   cd glusterfs-5.3
   #touch configure
-  #LDFLAGS=-L$PACKAGES/python/lib CFLAGS=-I$PACKAGES/python/include
+  LDFLAGS=-L$PACKAGES/python/lib CFLAGS=-I$PACKAGES/python/include \
   ./autogen.sh
+  LDFLAGS=-L$PACKAGES/python/lib CFLAGS=-I$PACKAGES/python/include \
   ./configure --prefix=$BOSH_INSTALL_TARGET --without-libtirpc
   make
   make install
