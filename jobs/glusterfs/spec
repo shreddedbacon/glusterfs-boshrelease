@@ -20,4 +20,5 @@ consumes:
 
 packages:
   - glusterfs
-#  - python
+  - python
+  - gluster-build-deps

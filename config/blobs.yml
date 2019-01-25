@@ -1,6 +1,6 @@
-gluster-build-deps/LVM2.2.02.183.tgz:
-  size: 2380574
-  sha: c73173d73e2ca17da254883968fbd52a6ce5c2a6
+gluster-build-deps/LVM2.2.02.130.tgz:
+  size: 1854927
+  sha: 9503a12881cb408aec6b774f0c92384c814d9684
 gluster-build-deps/XML-Parser-2.44.tar.gz:
   size: 237377
   sha: 0ab6b932713ec1f9927a1b1c619b6889a5c12849
@@ -19,6 +19,9 @@ gluster-build-deps/expat-2.2.6.tar.bz2:
 gluster-build-deps/flex-2.5.33.tar.gz:
   size: 880445
   sha: 9bf2d66bb2e15c26c466eb88218cca6ad9476805
+gluster-build-deps/gettext-0.19.8.tar.gz:
+  size: 19977131
+  sha: 4b3dc947a729fac8a14bde473454730919382b23
 gluster-build-deps/intltool-0.51.0.tar.gz:
   size: 162286
   sha: a0c3bcb99d1bcfc5db70f8d848232a47c47da090
@@ -34,12 +37,21 @@ gluster-build-deps/libnl-3.4.0.tar.gz:
 gluster-build-deps/librdmacm-1.1.0.tar.gz:
   size: 406442
   sha: d38867c3c7501471797f9bc952212d0c68cd3e50
+gluster-build-deps/libxml2-2.9.8.tar.gz:
+  size: 5469097
+  sha: 66bcefd98a6b7573427cf66f9d3841b59eb5b8c3
 gluster-build-deps/pkg-config-0.29.1.tar.gz:
   size: 2013454
   sha: 271ce928f6d673cc16cbced2bfd14a5f2e5d3d37
+gluster-build-deps/sqlite-autoconf-3220000.tar.gz:
+  size: 2644649
+  sha: 2fb24ec12001926d5209d2da90d252b9825366ac
 gluster-build-deps/userspace-rcu-0.10.2.tar.bz2:
   size: 503833
   sha: 70ac938acdc738bee7e2e1f462a7991a25ba2439
+gluster-build-deps/util-linux-2.33.1.tar.gz:
+  size: 6956344
+  sha: 9f22573b2829858312eebee15af5fff2f111cc77
 gluster-build-tools/autoconf-2.69.tar.gz:
   size: 1927468
   sha: 562471cbcb0dd0fa42a76665acf0dbb68479b78a
@@ -53,5 +65,5 @@ glusterfs/glusterfs-5.3.tar.gz:
   size: 7628366
   sha: 0c3bf8b0dedb973977df81a8336c57b5af3c2933
 python/Python-3.5.2.tgz:
-  size: 7628366
-  sha: 0c3bf8b0dedb973977df81a8336c57b5af3c2933
+  size: 20566643
+  sha: 94e838c405ea305ae7b52a34b6ea9a90126541e2

@@ -2,6 +2,7 @@
 name: gluster-build-deps
 
 dependencies:
+  - python
   - gluster-build-tools
 
 files:
@@ -14,8 +15,12 @@ files:
   - gluster-build-deps/libaio-0.3.111.tar.gz
   - gluster-build-deps/libibverbs-1.2.1.tar.gz
   - gluster-build-deps/librdmacm-1.1.0.tar.gz
-  - gluster-build-deps/LVM2.2.02.183.tgz
+  - gluster-build-deps/LVM2.2.02.130.tgz
   - gluster-build-deps/userspace-rcu-0.10.2.tar.bz2
   - gluster-build-deps/XML-Parser-2.44.tar.gz
   - gluster-build-deps/libnl-3.4.0.tar.gz
   - gluster-build-deps/pkg-config-0.29.1.tar.gz
+  - gluster-build-deps/util-linux-2.33.1.tar.gz
+  - gluster-build-deps/gettext-0.19.8.tar.gz
+  - gluster-build-deps/sqlite-autoconf-3220000.tar.gz
+  - gluster-build-deps/libxml2-2.9.8.tar.gz

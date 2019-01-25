@@ -128,17 +128,64 @@ tar xf gluster-build-deps/userspace-rcu-0.10.2.tar.bz2
 )
 
 #lvm2
-tar xf gluster-build-deps/LVM2.2.02.183.tgz
+tar xf gluster-build-deps/LVM2.2.02.130.tgz
 (
   set -e
-  cd LVM2.2.02.183
+  cd LVM2.2.02.130
   ./configure --prefix=$PREFIX    \
               --exec-prefix=      \
               --with-confdir=/etc \
               --enable-applib     \
               --enable-cmdlib     \
-              --enable-pkgconfig  \
-              --enable-udev_sync
+              --enable-pkgconfig
   make
   make install prefix=$PREFIX
+)
+
+#gettext
+tar xf gluster-build-deps/gettext-0.19.8.tar.gz
+(
+  set -e
+  cd gettext-0.19.8
+  ./configure --prefix=$PREFIX
+  make
+  make install prefix=$PREFIX
+)
+
+#util-linux
+tar xf gluster-build-deps/util-linux-2.33.1.tar.gz
+(
+  set -e
+  cd util-linux-2.33.1
+  AL_OPTS="-I/var/vcap/packages/gluster-build-deps/share/aclocal" ./autogen.sh
+  ./configure --prefix=$PREFIX \
+              --disable-chfn-chsh  \
+              --disable-login      \
+              --disable-nologin    \
+              --disable-su         \
+              --disable-setpriv    \
+              --disable-runuser    \
+              --disable-pylibmount \
+              --without-python     \
+              --without-systemd    \
+              --without-systemdsystemunitdir
+  make install
+)
+
+tar xf gluster-build-deps/sqlite-autoconf-3220000.tar.gz
+(
+  cd sqlite-autoconf-3220000
+  ./configure --prefix=$PREFIX
+  make
+  make install
+)
+
+tar xf gluster-build-deps/libxml2-2.9.8.tar.gz
+(
+  cd libxml2-2.9.8
+  ./configure --prefix=$PREFIX \
+    --with-history \
+    --with-python=/var/vcap/packages/python/bin/python3.5
+  make
+  make install
 )

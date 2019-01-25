@@ -8,10 +8,14 @@ tar xzf glusterfs/glusterfs-5.3.tar.gz
 (
   cd glusterfs-5.3
   #touch configure
-  LDFLAGS=-L$PACKAGES/python/lib CFLAGS=-I$PACKAGES/python/include \
+  export AL_OPTS="-I/var/vcap/packages/gluster-build-deps/share/aclocal"
+  export ACLOCAL_PATH=/var/vcap/packages/gluster-build-deps/share/aclocal
   ./autogen.sh
-  LDFLAGS=-L$PACKAGES/python/lib CFLAGS=-I$PACKAGES/python/include \
-  ./configure --prefix=$BOSH_INSTALL_TARGET --without-libtirpc
+  AL_OPTS="-I/var/vcap/packages/gluster-build-deps/share/aclocal" \
+  LDFLAGS="-L$PACKAGES/gluster-build-deps/lib -L$PACKAGES/python/lib" \
+  CFLAGS="-I$PACKAGES/gluster-build-deps/include -I$PACKAGES/python/include" \
+  ./configure --prefix=$BOSH_INSTALL_TARGET
+
   make
   make install
 )

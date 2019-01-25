@@ -2,6 +2,7 @@
 name: glusterfs
 
 dependencies:
+  - python
   - gluster-build-deps
   - gluster-build-tools
 
