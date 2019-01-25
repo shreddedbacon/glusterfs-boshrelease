@@ -1,54 +1,204 @@
-gluster-build-deps/LVM2.2.02.183.tgz:
-  size: 2380574
-  sha: c73173d73e2ca17da254883968fbd52a6ce5c2a6
-gluster-build-deps/XML-Parser-2.44.tar.gz:
-  size: 237377
-  sha: 0ab6b932713ec1f9927a1b1c619b6889a5c12849
-gluster-build-deps/acl-2.2.52.src.tar.gz:
-  size: 386604
-  sha: 537dddc0ee7b6aa67960a3de2d36f1e2ff2059d9
-gluster-build-deps/attr-2.4.47.src.tar.gz:
-  size: 343692
-  sha: 5060f0062baee6439f41a433325b8b3671f8d2d8
-gluster-build-deps/bison-3.2.4.tar.gz:
-  size: 3741209
-  sha: 5e10f5d5036907f9d58232372754bce58af651c2
-gluster-build-deps/expat-2.2.6.tar.bz2:
-  size: 513322
-  sha: c8947fc3119a797b55485f2f7bdaaeb49cc9df01
-gluster-build-deps/flex-2.5.33.tar.gz:
-  size: 880445
-  sha: 9bf2d66bb2e15c26c466eb88218cca6ad9476805
-gluster-build-deps/intltool-0.51.0.tar.gz:
-  size: 162286
-  sha: a0c3bcb99d1bcfc5db70f8d848232a47c47da090
-gluster-build-deps/libaio-0.3.111.tar.gz:
-  size: 45093
-  sha: 6ec2b954831d35573fd7f38e2423304eb841b50c
-gluster-build-deps/libibverbs-1.2.1.tar.gz:
-  size: 456666
-  sha: dc6e4a626704432d5dd019074241a8a1a4cc775f
-gluster-build-deps/libnl-3.4.0.tar.gz:
-  size: 933443
-  sha: 4fc4c3b6812dc7e68ef8acb69287583685266a0b
-gluster-build-deps/librdmacm-1.1.0.tar.gz:
-  size: 406442
-  sha: d38867c3c7501471797f9bc952212d0c68cd3e50
-gluster-build-deps/userspace-rcu-0.10.2.tar.bz2:
-  size: 503833
-  sha: 70ac938acdc738bee7e2e1f462a7991a25ba2439
-gluster-build-tools/autoconf-2.69.tar.gz:
-  size: 1927468
-  sha: 562471cbcb0dd0fa42a76665acf0dbb68479b78a
-gluster-build-tools/automake-1.16.1.tar.gz:
-  size: 2300906
-  sha: 7a4d8d8b16d2f3cece5ab92c32aba094a4597d97
-gluster-build-tools/libtool-2.4.6.tar.gz:
-  size: 1806697
-  sha: 25b6931265230a06f0fc2146df64c04e5ae6ec33
+gluster-build-deps/autoconf_2.69-9_all.deb:
+  size: 320904
+  sha: fd92f4224c1aee8d02d2eec1e05167b34743d174
+gluster-build-deps/automake_1.15-4ubuntu1_all.deb:
+  size: 509892
+  sha: bee0098bcfcc031d3379b2975934eac3f6b333fb
+gluster-build-deps/autotools-dev_20150820.1_all.deb:
+  size: 39774
+  sha: 2585c10f0d8519ca70be00eff2f79230b864be6e
+gluster-build-deps/bison_3.0.4.dfsg-1_amd64.deb:
+  size: 259466
+  sha: b51942012eae17c40766f2fc93cea21b8ad5862d
+gluster-build-deps/dmeventd_1.02.110-1ubuntu10_amd64.deb:
+  size: 31272
+  sha: dc8240ec16cbbfe80dff668dc33c0608790d7248
+gluster-build-deps/flex_2.6.0-11_amd64.deb:
+  size: 289798
+  sha: 39adcaf41fae21be6c2aef18758eef8be179cd75
+gluster-build-deps/git-man_2.7.4-0ubuntu1.6_all.deb:
+  size: 736452
+  sha: 351d85ba9f5af67645c710b58d5541b6d07dc3a9
+gluster-build-deps/git_2.7.4-0ubuntu1.6_amd64.deb:
+  size: 3175852
+  sha: 8a32957073b198515e4f9b9845ad34b3d4c24165
+gluster-build-deps/libacl1-dev_2.2.52-3_amd64.deb:
+  size: 73590
+  sha: 2f9d5eef474152f747d64b35b29cb633b195d252
+gluster-build-deps/libaio-dev_0.3.110-2_amd64.deb:
+  size: 12880
+  sha: 32da85d46c898a38fa83db763dc118a685f44572
+gluster-build-deps/libattr1-dev_2.4.47-2_amd64.deb:
+  size: 30174
+  sha: dbe1716178709fbffc8f0171939d40217429edc4
+gluster-build-deps/libcmocka-dev_1.0.1-2_amd64.deb:
+  size: 27212
+  sha: dedbebbe1f11dad1ad425f6ce69e71bc893962f2
+gluster-build-deps/libcmocka0_1.0.1-2_amd64.deb:
+  size: 17814
+  sha: bddb1f191f0119cb27ab4da59d12522500578776
+gluster-build-deps/libdevmapper-dev_1.02.110-1ubuntu10_amd64.deb:
+  size: 29646
+  sha: 35bb8c138d520514404a6806207788e3a77d2279
+gluster-build-deps/libdevmapper-event1.02.1_1.02.110-1ubuntu10_amd64.deb:
+  size: 12240
+  sha: 4f56f12cb631d9bca26996712338406d9e49ee4b
+gluster-build-deps/liberror-perl_0.17-1.2_all.deb:
+  size: 19594
+  sha: 796a1bed29d28b4b1934ab411c5e66dcfcdeb80f
+gluster-build-deps/libexpat1-dev_2.1.0-7ubuntu0.16.04.3_amd64.deb:
+  size: 115418
+  sha: bdab972bddda310b7748e096e2c7c6f83d55eeb9
+gluster-build-deps/libexpat1_2.1.0-7ubuntu0.16.04.3_amd64.deb:
+  size: 71192
+  sha: 38ffa0f757708c43bce925594ac79d46901065e0
+gluster-build-deps/libglib2.0-0_2.48.2-0ubuntu4.1_amd64.deb:
+  size: 1119624
+  sha: 20641165a62de08e9e928cf2c891cd5b311ca92c
+gluster-build-deps/libglib2.0-bin_2.48.2-0ubuntu4.1_amd64.deb:
+  size: 39402
+  sha: 2d91f401a6afd64c606a1098e9196d86e3742e17
+gluster-build-deps/libglib2.0-data_2.48.2-0ubuntu4.1_all.deb:
+  size: 131996
+  sha: e97fb0892d0efb2c79504063c8dbb25fe9dd4a62
+gluster-build-deps/libglib2.0-dev_2.48.2-0ubuntu4.1_amd64.deb:
+  size: 1378912
+  sha: fa50ba9357276b6bf19a46e3f6aa3db1d61a7d92
+gluster-build-deps/libibverbs-dev_1.1.8-1.1ubuntu2_amd64.deb:
+  size: 77608
+  sha: 00c3febd490e7721cf700c7e7009cc791ea2ba6c
+gluster-build-deps/libibverbs1_1.1.8-1.1ubuntu2_amd64.deb:
+  size: 25048
+  sha: 81fae1e13ca7c032e66a7734581ae22c78b30c6e
+gluster-build-deps/liblvm2-dev_2.02.133-1ubuntu10_amd64.deb:
+  size: 11888
+  sha: 50f2b3f353077d4ea1932d4cf35e732ae9c5b85f
+gluster-build-deps/liblvm2app2.2_2.02.133-1ubuntu10_amd64.deb:
+  size: 391652
+  sha: 5647def3e295f47c057f6a228b08b6abbf560fd3
+gluster-build-deps/liblvm2cmd2.02_2.02.133-1ubuntu10_amd64.deb:
+  size: 517716
+  sha: 935f81f8f6dced140808b37cf95a055144213071
+gluster-build-deps/libpcre3-dev_8.38-3.1_amd64.deb:
+  size: 525214
+  sha: 57f1747b06c52bb2edaf8bdfbe7fad4840e61305
+gluster-build-deps/libpcre3_8.38-3.1_amd64.deb:
+  size: 222826
+  sha: a6ca64812097d460f767aa74166bfdaa0af14395
+gluster-build-deps/libpcre16-3_8.38-3.1_amd64.deb:
+  size: 143800
+  sha: ac842668129a453d29113014ac82739d5e95dbbc
+gluster-build-deps/libpcre32-3_8.38-3.1_amd64.deb:
+  size: 135934
+  sha: fd0e24223272089658abf00a5651f413685839ac
+gluster-build-deps/libpcrecpp0v5_8.38-3.1_amd64.deb:
+  size: 15174
+  sha: 849ad5fd750e9fedcb3a5868460f7718558e82fc
+gluster-build-deps/libpython-stdlib_2.7.11-1_amd64.deb:
+  size: 7656
+  sha: e15c54934bfb66085035ae2762b2e0d794525e5d
+gluster-build-deps/libpython2.7-minimal_2.7.12-1ubuntu0~16.04.4_amd64.deb:
+  size: 339308
+  sha: f7f3cd2b0f0265829d9fbafdb53e0a76ef80dabc
+gluster-build-deps/libpython2.7-stdlib_2.7.12-1ubuntu0~16.04.4_amd64.deb:
+  size: 1880018
+  sha: 5f9ad9e47b26735c36ff55e77b9e70749d1ccd74
+gluster-build-deps/libpython3-dev_3.5.1-3_amd64.deb:
+  size: 6926
+  sha: dafe68843b3ace77758fb8c3a0ecdbcac7b8c164
+gluster-build-deps/libpython3.5-dev_3.5.2-2ubuntu0~16.04.5_amd64.deb:
+  size: 37316974
+  sha: 1e8fe37419c7a5b4759e5694a5088d8acd9820bc
+gluster-build-deps/libpython3.5-minimal_3.5.2-2ubuntu0~16.04.5_amd64.deb:
+  size: 524122
+  sha: 8ffcb9f97d2d9aa9ba46b4b22c10826d76cf6340
+gluster-build-deps/libpython3.5-stdlib_3.5.2-2ubuntu0~16.04.5_amd64.deb:
+  size: 2133912
+  sha: 22f054aa46f3113a32f3fe5b00028303b037ede9
+gluster-build-deps/libpython3.5_3.5.2-2ubuntu0~16.04.5_amd64.deb:
+  size: 1359912
+  sha: 25a16afa4645ac542281cdf6c1c1b8c13a8ba2c1
+gluster-build-deps/librdmacm-dev_1.0.21-1_amd64.deb:
+  size: 96056
+  sha: 8cfbb05d027b057f64509fd8193a66225cbf4efb
+gluster-build-deps/librdmacm1_1.0.21-1_amd64.deb:
+  size: 49132
+  sha: ebcdf2819a559696070f7860356c17a618e22133
+gluster-build-deps/libreadline-dev_6.3-8ubuntu2_amd64.deb:
+  size: 992
+  sha: 541435637ba69f4c44154afe1b6d5f4b980430d7
+gluster-build-deps/libselinux1-dev_2.4-3build2_amd64.deb:
+  size: 122454
+  sha: 3dc5841bd6063488d7ae541c7772e8f8cf4af97b
+gluster-build-deps/libselinux1_2.4-3build2_amd64.deb:
+  size: 55852
+  sha: 9e5126344d70f36f53e1eba23b41a6ad2d2e4f8c
+gluster-build-deps/libsepol1-dev_2.4-2_amd64.deb:
+  size: 248824
+  sha: 335c19e0bed65606bfdf452af5234ee9739bf841
+gluster-build-deps/libsepol1_2.4-2_amd64.deb:
+  size: 186408
+  sha: 13fcc0e69859d45b2166f24dd08e0d60683001b8
+gluster-build-deps/libsqlite3-dev_3.11.0-1ubuntu1_amd64.deb:
+  size: 507892
+  sha: 750d383b77a2380d9d48a66a0671d3559bcb02f4
+gluster-build-deps/libtirpc-dev_0.2.5-1ubuntu0.1_amd64.deb:
+  size: 152528
+  sha: 028883d2e87b34b3bd293518aa32297f7bac8c38
+gluster-build-deps/libtirpc1_0.2.5-1ubuntu0.1_amd64.deb:
+  size: 75442
+  sha: ab26db7cfc76971b6dcc18a4d1424c7232d83660
+gluster-build-deps/libtool_2.4.6-0.1_all.deb:
+  size: 193190
+  sha: 64cd29320cfa017374414a53208a4eece3793956
+gluster-build-deps/libudev-dev_229-4ubuntu21.15_amd64.deb:
+  size: 150470
+  sha: 2eabaf448fc33951a1d8eba0b183cba08083b627
+gluster-build-deps/libudev-dev_229-4ubuntu21.15_amd64.deb.:
+  size: 349
+  sha: ed691410656c953caf06cb3af8f89498dbcd81d6
+gluster-build-deps/libudev1_229-4ubuntu21.15_amd64.deb:
+  size: 54148
+  sha: a00f414aaa444cc7ac22e5106284a16d1f8f3edb
+gluster-build-deps/liburcu-dev_0.9.1-3_amd64.deb:
+  size: 477838
+  sha: eb63045f5d7b321b4d8149c0775abc6cb46fad10
+gluster-build-deps/liburcu4_0.9.1-3_amd64.deb:
+  size: 47324
+  sha: a8ecf9e4714183216e83b2ed5665db4b15e26ed1
+gluster-build-deps/libxml2-dev_2.9.3+dfsg1-1ubuntu0.6_amd64.deb:
+  size: 743062
+  sha: 9479c37a52ffaea11ece679c20143755b4e8fb53
+gluster-build-deps/pkg-config_0.29.1-0ubuntu1_amd64.deb:
+  size: 44964
+  sha: a9d163358ecf9b63e51010cb9fa658ea5b404d41
+gluster-build-deps/python-minimal_2.7.11-1_amd64.deb:
+  size: 28156
+  sha: d17f49af17f01a3e52f09d11d5757bb8c888b104
+gluster-build-deps/python_2.7.11-1_amd64.deb:
+  size: 136892
+  sha: eb433da2ec863602e32bbf5569ea4065bbc11e5c
+gluster-build-deps/python2.7-minimal_2.7.12-1ubuntu0~16.04.4_amd64.deb:
+  size: 1260712
+  sha: ef130ab644627d2269cec95409c28ecc999cc77b
+gluster-build-deps/python2.7_2.7.12-1ubuntu0~16.04.4_amd64.deb:
+  size: 224398
+  sha: 54cc79c198b916415a416c6c277bef0c9a6f9232
+gluster-build-deps/python3-dev_3.5.1-3_amd64.deb:
+  size: 1186
+  sha: 93abc854e0d65914b7aff6a6c28ae3b0c69409c2
+gluster-build-deps/python3.5-dev_3.5.2-2ubuntu0~16.04.5_amd64.deb:
+  size: 413300
+  sha: 49a942ab88e613df260a10b30bf5a23fdf533242
+gluster-build-deps/python3.5-minimal_3.5.2-2ubuntu0~16.04.5_amd64.deb:
+  size: 1598256
+  sha: 8c0275e8922999488491f9377f26950005af5605
+gluster-build-deps/python3.5_3.5.2-2ubuntu0~16.04.5_amd64.deb:
+  size: 165264
+  sha: 075154f40becd9ccfc3a2f0a4dd7fb2a4ce56348
+gluster-build-deps/python3_3.5.1-3_amd64.deb:
+  size: 8710
+  sha: f79fc28c5f188e0152662706997132eae0bfa88a
 glusterfs/glusterfs-5.3.tar.gz:
   size: 7628366
   sha: 0c3bf8b0dedb973977df81a8336c57b5af3c2933
-python/Python-3.4.0.tgz:
-  size: 19222299
-  sha: bb5125d1c437caa5a62e0a3d0fee298e91196d6f

@@ -1,7 +1,0 @@
----
-name: gluster-build-tools
-
-files:
-  - gluster-build-tools/autoconf-2.69.tar.gz
-  - gluster-build-tools/automake-1.16.1.tar.gz
-  - gluster-build-tools/libtool-2.4.6.tar.gz
