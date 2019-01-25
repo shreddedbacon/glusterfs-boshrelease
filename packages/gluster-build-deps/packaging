@@ -137,6 +137,8 @@ tar xf gluster-build-deps/LVM2.2.02.183.tgz
               --with-confdir=/etc \
               --enable-applib     \
               --enable-cmdlib     \
-              --enable-pkgconfig
+              --enable-pkgconfig  \
+              --enable-udev_sync
+  make
   make install prefix=$PREFIX
 )
