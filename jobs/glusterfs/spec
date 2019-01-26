@@ -6,6 +6,7 @@ templates:
   setup_nodes.sh.erb: "bin/setup_nodes.sh"
   glusterd.vol: "conf/glusterd.vol"
   post-deploy.sh: "bin/post-deploy"
+  pre-start.sh.erb: "bin/pre-start"
 
 provides:
   - name: glusterfs
@@ -20,3 +21,4 @@ consumes:
 packages:
   - glusterfs
   - python
+  - gluster-build-deps

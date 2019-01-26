@@ -2,11 +2,23 @@
 set -e
 
 export PACKAGES=/var/vcap/packages
-export PREFIX=$PACKAGES/gluster-build-deps
-export PATH=$PREFIX/bin:$PACKAGES/gluster-build-tools/bin:$PACKAGES/python/bin:$PATH
+export PATH=$PACKAGES/gluster-build-deps/bin:$PACKAGES/gluster-build-tools/bin:$PACKAGES/python/bin:$PATH
 
-tar xzf glusterfs/glusterfs-3.6.7.tar.gz
-cd glusterfs-3.6.7
+tar xzf glusterfs/glusterfs-5.3.tar.gz
+(
+  cd glusterfs-5.3
+  #touch configure
+  export AL_OPTS="-I/var/vcap/packages/gluster-build-deps/share/aclocal"
+  export ACLOCAL_PATH=/var/vcap/packages/gluster-build-deps/share/aclocal
+  ./autogen.sh
+  AL_OPTS="-I/var/vcap/packages/gluster-build-deps/share/aclocal" \
+  LDFLAGS="-L$PACKAGES/gluster-build-deps/lib -L$PACKAGES/python/lib" \
+  CFLAGS="-I$PACKAGES/gluster-build-deps/include -I$PACKAGES/python/include" \
+  ./configure --prefix=$BOSH_INSTALL_TARGET \
+              --enable-ibverbs
 
-./configure --prefix=$PREFIX
-make install prefix=$BOSH_INSTALL_TARGET
+  make
+  make install
+)
+
+
