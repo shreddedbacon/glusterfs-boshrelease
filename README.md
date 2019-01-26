@@ -1,5 +1,28 @@
 # GlusterFS BOSH Release
 
+# Create Volume
+```
+VOLUME_NAME=gv0
+VOLUME_PATH=/var/vcap/store/glustervol
+## On all servers
+mkdir -p ${VOLUME_PATH}
+
+## On one server
+volume create ${VOLUME_NAME} replica 3 \
+10.244.0.3:${VOLUME_PATH} \
+10.244.0.4:${VOLUME_PATH} \
+10.244.0.5:${VOLUME_PATH}
+```
+# Mount Volume
+```
+VOLUME_NAME=gv0
+VOLUME_MOUNT=/path/to/mnt
+SERVER=10.244.0.3 #ip or hostname
+mount -t glusterfs ${SERVER}:/${VOLUME_NAME} ${VOLUME_MOUNT}
+```
+
+
+# Compilation Notes
 Compiles GlusterFS as below on Ubuntu Xenial Stemcells 97.x
 ```
 GlusterFS configure summary
