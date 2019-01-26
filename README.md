@@ -28,7 +28,7 @@ Compiles GlusterFS as below on Ubuntu Xenial Stemcells 97.x
 GlusterFS configure summary
 ===========================
 FUSE client          : yes
-Infiniband verbs     : no
+Infiniband verbs     : yes
 epoll IO multiplex   : yes
 fusermount           : yes
 readline             : yes
@@ -58,5 +58,4 @@ Use TIRPC            : missing
 With Python          : 3.5
 Cloudsync            : yes
 ```
-
 
